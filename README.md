@@ -1,0 +1,1 @@
+﻿# CRUD application - internet shop
