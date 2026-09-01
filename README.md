@@ -166,18 +166,3 @@ npm run dev
 # Start production server
 npm start
 ```
-
-### Code Changes Auto-Reload
-The project uses Nodemon, which automatically restarts the server when file changes are detected during development.
-
-## License
-
-This project is open source and available under the MIT License.
-
-## Author
-
-Egorzhmurov
-
-## Support
-
-For issues or questions, please open an issue on GitHub.
