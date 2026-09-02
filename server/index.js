@@ -4,23 +4,23 @@ import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
 import route from './routes/user_route.js';
 
-// Загрузка переменных окружения из файла .env (из корневой папки)
+// Load environment variables from the .env file (from the root folder)
 dotenv.config({ path: '../.env' });
 
-// Инициализация приложения
+// Initialize the application
 const app = express();
 
-// Middleware для обработки JSON-запросов
+// Middleware for parsing JSON requests
 app.use(bodyParser.json());
 
-// Настройка порта (берется из .env или используется 8000 по умолчанию)
+// Set up the port (takes from .env or defaults to 8000)
 const PORT = process.env.PORT || 8000;
 const MONGO_URL = process.env.MONGO_URL;
 
-// Подключение роутов пользователей (все эндпоинты будут начинаться с /api)
+// Register user routes (all endpoints will start with /api)
 app.use("/api", route);
 
-// Подключение к MongoDB и запуск сервера
+// Connect to MongoDB and start the server
 mongoose
   .connect(MONGO_URL)
   .then(() => {
