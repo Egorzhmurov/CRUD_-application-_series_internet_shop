@@ -1,28 +1,73 @@
-/* Card container styling */
+/* 
+ * Styles the main wrapper for the user table component.
+ * It sets the width, centers the container on the page, adds inner padding, 
+ * applies a white background, and adds a subtle shadow for a card-like appearance.
+ */
 .userTable {
-  width: 60%;
+  width: 80%;
   margin: 50px auto;
-  background-color: white;
-  padding: 50px;
-  border-radius: 10px;
-  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.065);
-  text-align: left; /* Overrides Vite's default center alignment */
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: #ffffff;
 }
 
-/* Table width and top spacing below the button */
-.userTable table {
-  width: 100%;
-  margin-top: 30px;
+/* 
+ * Adds spacing below the "Add User" button.
+ * This ensures the button doesn't stick directly to the top of the table.
+ */
+.userTable .btn-primary {
+  margin-bottom: 20px;
 }
 
-/* Dark cyan table header with white text */
-.userTable table thead th {
-  background-color: darkcyan;
-  color: white;
+/* 
+ * Styles the table header row.
+ * Restores the teal/green background color, makes the text white, 
+ * aligns the text to the left, and sets a matching border color.
+ */
+.userTable .table thead th {
+  background-color: #00a8a8;
+  color: #ffffff;
+  border-color: #008b8b;
+  text-align: left;
 }
 
-/* Padding and vertical alignment for table data cells */
-.userTable table tbody td {
-  padding: 10px;
+/* 
+ * Vertically centers the content inside all table cells.
+ * Applies to both standard data cells (td) and header cells (th) for a neat look.
+ */
+.userTable .table td, 
+.userTable .table th {
   vertical-align: middle;
+}
+
+/* 
+ * Applies Flexbox to the table cell containing the action buttons.
+ * Aligns the update and delete buttons neatly in a row with a 10px gap between them.
+ */
+.action-buttons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+/* 
+ * Styles the individual action buttons (Update/Delete) using Flexbox.
+ * Ensures the SVG icons inside are perfectly centered both horizontally and vertically.
+ */
+.action-buttons .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 12px;
+}
+
+/* 
+ * Fixes default SVG behavior inside buttons.
+ * Removes unnecessary margins and sets display to block to prevent alignment bugs.
+ */
+.action-buttons .btn svg {
+  margin: 0;
+  display: block;
 }

@@ -2,6 +2,8 @@ import express from 'express';
 import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
+// 1. Importing the cors middleware to handle Cross-Origin Resource Sharing
+import cors from 'cors'; 
 import route from './routes/user_route.js';
 
 // Load environment variables from the .env file (from the root folder)
@@ -12,6 +14,9 @@ const app = express();
 
 // Middleware for parsing JSON requests
 app.use(bodyParser.json());
+
+// 2. Applying the cors middleware to allow requests from the frontend (e.g., localhost:5173)
+app.use(cors());
 
 // Set up the port (takes from .env or defaults to 8000)
 const PORT = process.env.PORT || 8000;
