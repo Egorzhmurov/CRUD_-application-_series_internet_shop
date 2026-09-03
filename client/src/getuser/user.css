@@ -1,4 +1,28 @@
+/* Card container styling */
 .userTable {
-     margin-top: 20px;
-     }
-     
+  width: 60%;
+  margin: 50px auto;
+  background-color: white;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.065);
+  text-align: left; /* Overrides Vite's default center alignment */
+}
+
+/* Table width and top spacing below the button */
+.userTable table {
+  width: 100%;
+  margin-top: 30px;
+}
+
+/* Dark cyan table header with white text */
+.userTable table thead th {
+  background-color: darkcyan;
+  color: white;
+}
+
+/* Padding and vertical alignment for table data cells */
+.userTable table tbody td {
+  padding: 10px;
+  vertical-align: middle;
+}
