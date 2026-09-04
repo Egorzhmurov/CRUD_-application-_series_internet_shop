@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './user.css';
 
@@ -19,9 +20,11 @@ const User = () => {
 
   return (
     <div className="userTable">
-      <button type="button" className="btn btn-primary">
+      
+      {/* Кнопка Add User теперь является ссылкой (Link) для роутинга */}
+      <Link to="/add" className="btn btn-primary">
         <i className="fa-solid fa-user-plus"></i> Add User
-      </button>
+      </Link>
 
       <table className="table table-bordered">
         <thead>

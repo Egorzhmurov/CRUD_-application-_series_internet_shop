@@ -1,11 +1,24 @@
 import React from 'react';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import User from './getuser/user';
+import AddUser from './adduser/AddUser';
+import './App.css';
 
-// Main App component
 function App() {
+  const route = createBrowserRouter([
+    {
+      path: "/",
+      element: <User />,
+    },
+    {
+      path: "/add",
+      element: <AddUser />,
+    },
+  ]);
+
   return (
-    <div>
-      <User />
+    <div className="App">
+      <RouterProvider router={route} />
     </div>
   );
 }
