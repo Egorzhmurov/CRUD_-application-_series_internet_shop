@@ -1,0 +1,90 @@
+/* Centers the entire form wrapper vertically and horizontally */
+.add-user-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+}
+
+/* Styling for the main white form card */
+.add-user-card {
+  background-color: white;
+  width: 25%;
+  min-width: 350px;
+  padding: 40px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.065);
+}
+
+/* Styling for the secondary back navigation button */
+.add-user-back-btn {
+  background-color: #6c757d;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px; /* Adds space between the FontAwesome icon and text */
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+/* Form heading with specific darkcyan color and text shadow */
+.add-user-card h3 {
+  text-align: center;
+  font-weight: bold;
+  color: darkcyan;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+  margin-bottom: 25px;
+}
+
+/* Flexbox container to stack labels directly above inputs */
+.add-user-input-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+/* Styling for the input labels */
+.add-user-input-group label {
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* 
+  Styling for the input fields. 
+  Explicitly setting white background and dark text for visibility. 
+*/
+.add-user-input-group input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  background-color: #ffffff; /* Forces a solid white background */
+  color: #333333; /* Dark gray text for high contrast */
+}
+
+/* Placeholder text styling inside the input fields */
+.add-user-input-group input::placeholder {
+  color: #999999;
+}
+
+/* Focus state border color when the user clicks inside the input */
+.add-user-input-group input:focus {
+  border-color: #0d6efd;
+}
+
+/* Main primary submit button styling at the bottom of the form */
+.add-user-submit-btn {
+  margin-top: 10px;
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
